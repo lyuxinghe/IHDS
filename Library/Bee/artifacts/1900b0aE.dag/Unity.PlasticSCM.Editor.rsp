@@ -116,9 +116,9 @@
 -define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"D:/SPIN/Library/PackageCache/com.unity.collab-proxy@1.15.13/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
--r:"D:/SPIN/Library/PackageCache/com.unity.collab-proxy@1.15.13/Lib/Editor/PlasticSCM/unityplastic.dll"
--r:"D:/SPIN/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"D:/IHDS/Library/PackageCache/com.unity.collab-proxy@1.15.13/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
+-r:"D:/IHDS/Library/PackageCache/com.unity.collab-proxy@1.15.13/Lib/Editor/PlasticSCM/unityplastic.dll"
+-r:"D:/IHDS/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"D:/Unity/2021.2.16f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/Unity/2021.2.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Unity/2021.2.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

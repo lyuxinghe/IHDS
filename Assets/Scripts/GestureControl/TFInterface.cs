@@ -13,19 +13,25 @@ public class TFInterface : MonoBehaviour
     private const float MIN_SCALE = 4f;
     private const float MAX_SCALE = 4f;
 
+    private const float DIF_CAP = 0.8f;
     
     /* Private variables defined here */
     private static float curMin;
     private static float curMax;
 
     /* Default color value assigned to TF function (see Transfer Function Database file) */ 
+    private float H1, S1, V1, H2, S2, V2, H3, S3, V3;
     private Color c1 = new Color(0.11f, 0.14f, 0.13f, 1.0f);
     private Color c2 = new Color(0.469f, 0.354f, 0.223f, 1.0f);
     private Color c3 = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
+
     // Start is called before the first frame update
     void Start()
     {
+        Color.RGBToHSV(c1, out H1, out S1, out V1);
+        Color.RGBToHSV(c2, out H2, out S2, out V2);
+        Color.RGBToHSV(c3, out H3, out S3, out V3);
     }
 
     // Update is called once per frame
@@ -39,7 +45,9 @@ public class TFInterface : MonoBehaviour
     }
 
     private Color mapColor(int index, float dif, Color oldRGBColor)
-    {
+    {   
+        // lerping through one color
+        /*
         Color newRGBColor;
         switch (index)
         {
@@ -56,7 +64,32 @@ public class TFInterface : MonoBehaviour
             newRGBColor = oldRGBColor;
             break;
         }
-        return newRGBColor;
+        return newRGBColor;*/
+
+        // changing color accordingly
+        float newH, newS, newV;
+        Color newRGBColor;
+        if(dif > DIF_CAP)
+            return oldRGBColor;
+        else
+        {
+            switch (index)
+            {
+            case 2:
+                newRGBColor = Color.HSVToRGB(H3 + DIF_CAP - dif, S3 + DIF_CAP - dif, V3 + DIF_CAP - dif);
+                break;
+            case 1:
+                newRGBColor = Color.HSVToRGB(H2 + DIF_CAP - dif, S2 + DIF_CAP - dif, V2 + DIF_CAP - dif);
+                break;
+            case 0:
+                newRGBColor = Color.HSVToRGB(H1 + DIF_CAP - dif, S1 + DIF_CAP - dif, V1 + DIF_CAP - dif);
+                break;
+            default:
+                newRGBColor = oldRGBColor;
+                break;
+            }
+            return newRGBColor;
+        }
     }
 
     private void TFColorChange(float newMin, float newMax)

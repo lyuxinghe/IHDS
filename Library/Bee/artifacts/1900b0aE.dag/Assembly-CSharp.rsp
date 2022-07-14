@@ -116,8 +116,8 @@
 -define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"D:/SPIN/Library/PackageCache/com.unity.cinemachine@2.8.4/Runtime/ThirdParty/clipper_library.dll"
--r:"D:/SPIN/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"D:/IHDS/Library/PackageCache/com.unity.cinemachine@2.8.4/Runtime/ThirdParty/clipper_library.dll"
+-r:"D:/IHDS/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"D:/Unity/2021.2.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Unity/2021.2.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"D:/Unity/2021.2.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
