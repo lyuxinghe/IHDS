@@ -112,8 +112,8 @@ public class TFInterface : MonoBehaviour
     public void setIsovalue(float deltaMin, float deltaMax)
     {
         VolumeRenderedObject VRO = FindObjectOfType<VolumeRenderedObject>();
-        float newMin = curMin + MIN_SCALE * deltaMin;
-        float newMax = curMax + MIN_SCALE * deltaMax;
+        float newMin = curMin - MIN_SCALE * deltaMin;
+        float newMax = curMax - MIN_SCALE * deltaMax;
 
         if(newMin < OVA_MIN)
             newMin = OVA_MIN;
